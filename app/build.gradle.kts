@@ -6,12 +6,11 @@ plugins {
 
 android {
     namespace = "com.tfandkusu.ate"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.tfandkusu.ate"
         minSdk = 24
-        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
