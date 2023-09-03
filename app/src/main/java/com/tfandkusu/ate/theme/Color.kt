@@ -1,4 +1,4 @@
-package com.tfandkusu.ate.ui.theme
+package com.tfandkusu.ate.theme
 
 import androidx.compose.ui.graphics.Color
 
