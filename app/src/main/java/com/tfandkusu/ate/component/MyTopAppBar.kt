@@ -20,27 +20,27 @@ fun MyTopAppBar(
     hasBack: Boolean = false,
     backContentDescription: String = "",
     actions: @Composable RowScope.() -> Unit = {},
-    onBackPressed: () -> Unit = {}
+    onBackPressed: () -> Unit = {},
 ) {
     TopAppBar(
         title = title,
         colors = TopAppBarDefaults.smallTopAppBarColors(
             containerColor = MaterialTheme
                 .colorScheme
-                .surfaceColorAtElevation(2.dp)
+                .surfaceColorAtElevation(2.dp),
         ),
         navigationIcon = if (hasBack) {
             {
                 IconButton(onClick = onBackPressed) {
                     Icon(
                         Icons.Default.ArrowBack,
-                        contentDescription = backContentDescription
+                        contentDescription = backContentDescription,
                     )
                 }
             }
         } else {
             {}
         },
-        actions = actions
+        actions = actions,
     )
 }

@@ -42,7 +42,6 @@ private val lightColors = lightColorScheme(
     scrim = md_theme_light_scrim,
 )
 
-
 private val darkColors = darkColorScheme(
     primary = md_theme_dark_primary,
     onPrimary = md_theme_dark_onPrimary,
@@ -79,7 +78,7 @@ private val darkColors = darkColorScheme(
 fun MyTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
@@ -92,6 +91,6 @@ fun MyTheme(
     }
     MaterialTheme(
         colorScheme = colorScheme,
-        content = content
+        content = content,
     )
 }

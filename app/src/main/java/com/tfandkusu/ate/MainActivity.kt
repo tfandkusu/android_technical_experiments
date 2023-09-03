@@ -29,25 +29,23 @@ class MainActivity : ComponentActivity() {
                         MyTopAppBar(title = {
                             Text(text = stringResource(id = R.string.app_name))
                         })
-                    }
+                    },
                 ) { innerPadding ->
                     LazyColumn(
                         modifier = Modifier
                             .fillMaxSize(),
-                        contentPadding = innerPadding
-                    ){
+                        contentPadding = innerPadding,
+                    ) {
                         items(20) {
                             Text(
                                 text = "Item $it",
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(16.dp)
+                                    .padding(16.dp),
                             )
                         }
                     }
-
                 }
-
             }
         }
     }
