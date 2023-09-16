@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android Technical Experiments</string>
+    <string name="jetpack_navigation_transition_animation">Jetpack Navigation Transition Animation</string>
+    <string name="screen_n">Screen %d</string>
 </resources>
