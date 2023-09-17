@@ -5,5 +5,18 @@
     app:startDestination="@+id/no1">
     <fragment
         android:id="@+id/no1"
-        android:name="com.tfandkusu.ate.feature.jnta.No1Fragment" />
+        android:name="com.tfandkusu.ate.feature.jnta.No1Fragment">
+        <action
+            android:id="@+id/actionNo2"
+            app:destination="@+id/no2" />
+        <action
+            android:id="@+id/actionNo3"
+            app:destination="@+id/no3" />
+    </fragment>
+    <fragment
+        android:id="@+id/no2"
+        android:name="com.tfandkusu.ate.feature.jnta.No2Fragment" />
+    <fragment
+        android:id="@+id/no3"
+        android:name="com.tfandkusu.ate.feature.jnta.No3Fragment" />
 </navigation>
