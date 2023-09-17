@@ -18,6 +18,7 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.tfandkusu.ate.R
 import com.tfandkusu.ate.component.MyTopAppBar
 import com.tfandkusu.ate.theme.MyTheme
@@ -57,9 +58,9 @@ class No1Fragment : Fragment() {
                         ) {
                             Button(
                                 onClick = {
-//                                    findNavController().navigate(
-//
-//                                    )
+                                    findNavController().navigate(
+                                        No1FragmentDirections.actionNo2(),
+                                    )
                                 },
                             ) {
                                 Text(text = stringResource(id = R.string.open_screen_n, 2))
