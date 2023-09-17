@@ -6,7 +6,11 @@ plugins {
     alias(libs.plugins.spotless.gradle.plugin)
 }
 true // Needed to make the Suppress annotation work for the plugins block
-
+buildscript {
+    dependencies {
+        classpath(libs.navigation.safe.args)
+    }
+}
 spotless {
     kotlin {
         target("**/*.kt")
