@@ -50,7 +50,7 @@ class No2Fragment : Fragment() {
                                 .fillMaxSize()
                                 .padding(innerPadding)
                                 .padding(16.dp),
-                            text = stringResource(id = R.string.screen_n, 2)
+                            text = stringResource(id = R.string.screen_n, 2),
                         )
                     }
                 }

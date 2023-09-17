@@ -57,7 +57,6 @@ class No1Fragment : Fragment() {
                         ) {
                             Button(
                                 onClick = {
-
 //                                    findNavController().navigate(
 //
 //                                    )
