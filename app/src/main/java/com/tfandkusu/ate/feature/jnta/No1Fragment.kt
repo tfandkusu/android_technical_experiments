@@ -60,12 +60,8 @@ class No1Fragment : Fragment() {
                         ) {
                             Button(
                                 onClick = {
-                                    exitTransition = MaterialSharedAxis(
-                                        MaterialSharedAxis.X, true,
-                                    )
-                                    reenterTransition = MaterialSharedAxis(
-                                        MaterialSharedAxis.X, false,
-                                    )
+                                    exitTransition = null
+                                    reenterTransition = null
                                     findNavController().navigate(
                                         No1FragmentDirections.actionNo2(),
                                     )
@@ -75,8 +71,12 @@ class No1Fragment : Fragment() {
                             }
                             Button(
                                 onClick = {
-                                    exitTransition = null
-                                    reenterTransition = null
+                                    exitTransition = MaterialSharedAxis(
+                                        MaterialSharedAxis.X, true,
+                                    )
+                                    reenterTransition = MaterialSharedAxis(
+                                        MaterialSharedAxis.X, false,
+                                    )
                                     findNavController().navigate(
                                         No1FragmentDirections.actionNo3(),
                                     )
