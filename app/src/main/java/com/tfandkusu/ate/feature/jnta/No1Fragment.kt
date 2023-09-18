@@ -26,12 +26,6 @@ import com.tfandkusu.ate.theme.MyTheme
 
 class No1Fragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
-        reenterTransition = MaterialSharedAxis(MaterialSharedAxis.X, false)
-    }
-
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -66,6 +60,12 @@ class No1Fragment : Fragment() {
                         ) {
                             Button(
                                 onClick = {
+                                    exitTransition = MaterialSharedAxis(
+                                        MaterialSharedAxis.X, true,
+                                    )
+                                    reenterTransition = MaterialSharedAxis(
+                                        MaterialSharedAxis.X, false,
+                                    )
                                     findNavController().navigate(
                                         No1FragmentDirections.actionNo2(),
                                     )
@@ -75,6 +75,8 @@ class No1Fragment : Fragment() {
                             }
                             Button(
                                 onClick = {
+                                    exitTransition = null
+                                    reenterTransition = null
                                     findNavController().navigate(
                                         No1FragmentDirections.actionNo3(),
                                     )
