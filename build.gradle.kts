@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.android) apply false
     alias(libs.plugins.spotless.gradle.plugin)
     alias(libs.plugins.navigation.safeargs.kotlin) apply false
+    alias(libs.plugins.kotlin.parcelize) apply false
 }
 true // Needed to make the Suppress annotation work for the plugins block
 buildscript {

@@ -34,5 +34,6 @@ com-android-application = { id = "com.android.application", version.ref = "agp" 
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
 spotless-gradle-plugin = { id = "com.diffplug.spotless", version = "6.21.0" }
 navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+kotlin-parcelize = {id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "org-jetbrains-kotlin-android"}
 [bundles]
 
