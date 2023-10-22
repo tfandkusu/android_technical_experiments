@@ -19,11 +19,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.transition.MaterialSharedAxis
 import com.tfandkusu.ate.R
 import com.tfandkusu.ate.component.MyTopAppBar
 import com.tfandkusu.ate.theme.MyTheme
 
-class No1Fragment : Fragment() {
+class Screen1Fragment : Fragment() {
+
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -58,8 +60,10 @@ class No1Fragment : Fragment() {
                         ) {
                             Button(
                                 onClick = {
+                                    exitTransition = null
+                                    reenterTransition = null
                                     findNavController().navigate(
-                                        No1FragmentDirections.actionNo2(),
+                                        Screen1FragmentDirections.actionScreen2(),
                                     )
                                 },
                             ) {
@@ -67,8 +71,14 @@ class No1Fragment : Fragment() {
                             }
                             Button(
                                 onClick = {
+                                    exitTransition = MaterialSharedAxis(
+                                        MaterialSharedAxis.X, true,
+                                    )
+                                    reenterTransition = MaterialSharedAxis(
+                                        MaterialSharedAxis.X, false,
+                                    )
                                     findNavController().navigate(
-                                        No1FragmentDirections.actionNo3(),
+                                        Screen1FragmentDirections.actionScreen3(),
                                     )
                                 },
                             ) {

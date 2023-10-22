@@ -20,7 +20,8 @@ import com.tfandkusu.ate.R
 import com.tfandkusu.ate.component.MyTopAppBar
 import com.tfandkusu.ate.theme.MyTheme
 
-class No2Fragment : Fragment() {
+class Screen2Fragment : Fragment() {
+
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreateView(
         inflater: LayoutInflater,

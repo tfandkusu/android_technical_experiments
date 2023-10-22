@@ -2,21 +2,25 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@+id/no1">
+    app:startDestination="@+id/screen1">
     <fragment
-        android:id="@+id/no1"
-        android:name="com.tfandkusu.ate.feature.jnta.No1Fragment">
+        android:id="@+id/screen1"
+        android:name="com.tfandkusu.ate.feature.jnta.Screen1Fragment">
         <action
-            android:id="@+id/actionNo2"
-            app:destination="@+id/no2" />
+            android:id="@+id/actionScreen2"
+            app:destination="@+id/screen2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/actionNo3"
-            app:destination="@+id/no3" />
+            android:id="@+id/actionScreen3"
+            app:destination="@+id/screen3" />
     </fragment>
     <fragment
-        android:id="@+id/no2"
-        android:name="com.tfandkusu.ate.feature.jnta.No2Fragment" />
+        android:id="@+id/screen2"
+        android:name="com.tfandkusu.ate.feature.jnta.Screen2Fragment" />
     <fragment
-        android:id="@+id/no3"
-        android:name="com.tfandkusu.ate.feature.jnta.No3Fragment" />
+        android:id="@+id/screen3"
+        android:name="com.tfandkusu.ate.feature.jnta.Screen3Fragment" />
 </navigation>
