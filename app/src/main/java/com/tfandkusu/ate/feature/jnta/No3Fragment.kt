@@ -21,6 +21,10 @@ import com.tfandkusu.ate.component.MyTopAppBar
 import com.tfandkusu.ate.theme.MyTheme
 
 class No3Fragment : Fragment() {
+
+    // ビルドエラーになる箇所
+    // private val args: Int by navArgs()
+
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -51,7 +55,10 @@ class No3Fragment : Fragment() {
                                 .fillMaxSize()
                                 .padding(innerPadding)
                                 .padding(16.dp),
-                            text = stringResource(id = R.string.screen_n, 3),
+                            text = stringResource(
+                                id = R.string.parcelable_argument,
+                                "TODO",
+                            ),
                         )
                     }
                 }

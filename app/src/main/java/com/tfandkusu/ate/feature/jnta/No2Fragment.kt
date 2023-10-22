@@ -16,11 +16,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.tfandkusu.ate.R
 import com.tfandkusu.ate.component.MyTopAppBar
+import com.tfandkusu.ate.feature.jnta.args.EnumArgument
 import com.tfandkusu.ate.theme.MyTheme
 
 class No2Fragment : Fragment() {
+
+    private val args: EnumArgument by navArgs()
+
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -51,7 +56,7 @@ class No2Fragment : Fragment() {
                                 .fillMaxSize()
                                 .padding(innerPadding)
                                 .padding(16.dp),
-                            text = stringResource(id = R.string.screen_n, 2),
+                            text = stringResource(id = R.string.enum_argument, args.name),
                         )
                     }
                 }

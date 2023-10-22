@@ -21,6 +21,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.tfandkusu.ate.R
 import com.tfandkusu.ate.component.MyTopAppBar
+import com.tfandkusu.ate.feature.jnta.args.EnumArgument
+import com.tfandkusu.ate.feature.jnta.args.ParcelableArgument
 import com.tfandkusu.ate.theme.MyTheme
 
 class No1Fragment : Fragment() {
@@ -59,7 +61,9 @@ class No1Fragment : Fragment() {
                             Button(
                                 onClick = {
                                     findNavController().navigate(
-                                        No1FragmentDirections.actionNo2(),
+                                        No1FragmentDirections.actionNo2(
+                                            EnumArgument.Melon,
+                                        ),
                                     )
                                 },
                             ) {
@@ -68,7 +72,12 @@ class No1Fragment : Fragment() {
                             Button(
                                 onClick = {
                                     findNavController().navigate(
-                                        No1FragmentDirections.actionNo3(),
+                                        No1FragmentDirections.actionNo3(
+                                            ParcelableArgument(
+                                                id = 7,
+                                                name = "Pear",
+                                            ),
+                                        ),
                                     )
                                 },
                             ) {

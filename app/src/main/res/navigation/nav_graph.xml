@@ -15,8 +15,19 @@
     </fragment>
     <fragment
         android:id="@+id/no2"
-        android:name="com.tfandkusu.ate.feature.jnta.No2Fragment" />
+        android:name="com.tfandkusu.ate.feature.jnta.No2Fragment"
+        android:label="No2Fragment">
+        <argument
+            android:name="enumArgument"
+            app:argType="com.tfandkusu.ate.feature.jnta.args.EnumArgument" />
+
+    </fragment>
     <fragment
         android:id="@+id/no3"
-        android:name="com.tfandkusu.ate.feature.jnta.No3Fragment" />
+        android:name="com.tfandkusu.ate.feature.jnta.No3Fragment"
+        android:label="No3Fragment">
+        <argument
+            android:name="parcelableArgument"
+            app:argType="com.tfandkusu.ate.feature.jnta.args.ParcelableArgument" />
+    </fragment>
 </navigation>

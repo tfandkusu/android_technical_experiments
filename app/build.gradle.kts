@@ -2,7 +2,9 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    id("androidx.navigation.safeargs.kotlin")
+    // TODO libs.versions.toml を使う
+    id("androidx.navigation.safeargs")
+    id("kotlin-parcelize")
 }
 
 android {
