@@ -33,5 +33,6 @@ navigation-safe-args = { group = "androidx.navigation", name = "navigation-safe-
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
 spotless-gradle-plugin = { id = "com.diffplug.spotless", version = "6.21.0" }
+navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
 [bundles]
 
