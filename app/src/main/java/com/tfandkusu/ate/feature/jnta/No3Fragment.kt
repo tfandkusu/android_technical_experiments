@@ -16,14 +16,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.tfandkusu.ate.R
 import com.tfandkusu.ate.component.MyTopAppBar
 import com.tfandkusu.ate.theme.MyTheme
 
 class No3Fragment : Fragment() {
 
-    // ビルドエラーになる箇所
-    // private val args: Int by navArgs()
+    private val args: No3FragmentArgs by navArgs()
 
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreateView(
@@ -55,10 +55,7 @@ class No3Fragment : Fragment() {
                                 .fillMaxSize()
                                 .padding(innerPadding)
                                 .padding(16.dp),
-                            text = stringResource(
-                                id = R.string.parcelable_argument,
-                                "TODO",
-                            ),
+                            text = args.parcelableArgument.toString(),
                         )
                     }
                 }
