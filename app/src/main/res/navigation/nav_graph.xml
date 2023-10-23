@@ -19,8 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/screen2"
-        android:name="com.tfandkusu.ate.feature.jnta.Screen2Fragment"
-        android:label="No2Fragment">
+        android:name="com.tfandkusu.ate.feature.jnta.Screen2Fragment">
         <argument
             android:name="enumArgument"
             app:argType="com.tfandkusu.ate.feature.jnta.args.EnumArgument" />
@@ -28,8 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/screen3"
-        android:name="com.tfandkusu.ate.feature.jnta.Screen3Fragment"
-        android:label="No3Fragment">
+        android:name="com.tfandkusu.ate.feature.jnta.Screen3Fragment">
         <argument
             android:name="parcelableArgument"
             app:argType="com.tfandkusu.ate.feature.jnta.args.ParcelableArgument" />
