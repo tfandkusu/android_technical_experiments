@@ -21,14 +21,23 @@ android {
             useSupportLibrary = true
         }
     }
+    signingConfigs {
+        create("release") {
+            storeFile = file("${System.getenv("HOME")}/ate.jks")
+            storePassword = System.getenv("ATE_STORE_PASSWORD")
+            keyAlias = "app"
+            keyPassword = System.getenv("ATE_KEY_PASSWORD")
+        }
+    }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
