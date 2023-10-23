@@ -3,4 +3,6 @@
     <string name="jetpack_navigation_transition_animation">Jetpack Navigation Transition Animation</string>
     <string name="screen_n">Screen %d</string>
     <string name="open_screen_n">Open Screen %d</string>
+    <string name="enum_argument">EnumArgument = %s</string>
+    <string name="parcelable_argument">ParcelableArgument = %s</string>
 </resources>

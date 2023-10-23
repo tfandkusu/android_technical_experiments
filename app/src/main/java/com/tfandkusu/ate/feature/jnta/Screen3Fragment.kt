@@ -16,12 +16,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.google.android.material.transition.MaterialSharedAxis
 import com.tfandkusu.ate.R
 import com.tfandkusu.ate.component.MyTopAppBar
 import com.tfandkusu.ate.theme.MyTheme
 
 class Screen3Fragment : Fragment() {
+
+    private val args: Screen3FragmentArgs by navArgs()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enterTransition = MaterialSharedAxis(MaterialSharedAxis.X, true)
@@ -58,7 +62,7 @@ class Screen3Fragment : Fragment() {
                                 .fillMaxSize()
                                 .padding(innerPadding)
                                 .padding(16.dp),
-                            text = stringResource(id = R.string.screen_n, 3),
+                            text = args.parcelableArgument.toString(),
                         )
                     }
                 }

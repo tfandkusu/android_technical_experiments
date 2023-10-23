@@ -22,6 +22,8 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.transition.MaterialSharedAxis
 import com.tfandkusu.ate.R
 import com.tfandkusu.ate.component.MyTopAppBar
+import com.tfandkusu.ate.feature.jnta.args.EnumArgument
+import com.tfandkusu.ate.feature.jnta.args.ParcelableArgument
 import com.tfandkusu.ate.theme.MyTheme
 
 class Screen1Fragment : Fragment() {
@@ -63,7 +65,9 @@ class Screen1Fragment : Fragment() {
                                     exitTransition = null
                                     reenterTransition = null
                                     findNavController().navigate(
-                                        Screen1FragmentDirections.actionScreen2(),
+                                        Screen1FragmentDirections.actionScreen2(
+                                            EnumArgument.Melon,
+                                        ),
                                     )
                                 },
                             ) {
@@ -78,7 +82,12 @@ class Screen1Fragment : Fragment() {
                                         MaterialSharedAxis.X, false,
                                     )
                                     findNavController().navigate(
-                                        Screen1FragmentDirections.actionScreen3(),
+                                        Screen1FragmentDirections.actionScreen3(
+                                            ParcelableArgument(
+                                                id = 7,
+                                                name = "Pear",
+                                            ),
+                                        ),
                                     )
                                 },
                             ) {
