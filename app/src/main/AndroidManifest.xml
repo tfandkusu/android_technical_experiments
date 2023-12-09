@@ -29,6 +29,11 @@
             android:label="@string/jetpack_navigation_transition_animation"
             android:theme="@style/Theme.MyTheme" />
 
+        <activity
+            android:name=".feature.keyboard.SoftKeyboardExperimentActivity"
+            android:label="@string/jetpack_navigation_transition_animation"
+            android:theme="@style/Theme.MyTheme" />
+
         <activity-alias
             android:name=".feature.jnta.JetpackNavigationTransitionAnimationActivityAlias"
             android:targetActivity=".feature.jnta.JetpackNavigationTransitionAnimationActivity" />

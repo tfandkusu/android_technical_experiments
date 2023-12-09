@@ -18,7 +18,7 @@ fun FeatureTextButton(
     TextButton(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(horizontal = 16.dp),
         onClick = onClick,
     ) {
         Text(
