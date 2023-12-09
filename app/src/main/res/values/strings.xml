@@ -6,4 +6,6 @@
     <string name="enum_argument">EnumArgument = %s</string>
     <string name="parcelable_argument">ParcelableArgument = %s</string>
     <string name="soft_keyboard_experiment">Soft keyboard experiment</string>
+    <string name="soft_keyboard_show">Soft keyboard: Show</string>
+    <string name="soft_keyboard_hide">Soft keyboard: Hide</string>
 </resources>
