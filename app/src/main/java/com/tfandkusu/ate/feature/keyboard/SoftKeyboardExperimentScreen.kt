@@ -1,10 +1,12 @@
 package com.tfandkusu.ate.feature.keyboard
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.ime
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -24,7 +26,7 @@ import com.tfandkusu.ate.R
 import com.tfandkusu.ate.component.MyTopAppBar
 import com.tfandkusu.ate.theme.MyTheme
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun SoftKeyboardExperimentScreen(
     finish: () -> Unit,
@@ -47,12 +49,19 @@ fun SoftKeyboardExperimentScreen(
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(innerPadding)
-                    .padding(16.dp),
+                    .imePadding(),
                 verticalArrangement = Arrangement.Absolute.spacedBy(16.dp),
+                contentPadding = innerPadding,
             ) {
+                items(20, key = { it }) {
+                    Text(
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                        text = "Item $it",
+                    )
+                }
                 item {
                     Text(
+                        modifier = Modifier.padding(horizontal = 16.dp),
                         text = if (isKeyboardVisible) {
                             stringResource(R.string.soft_keyboard_show)
                         } else {
@@ -62,12 +71,20 @@ fun SoftKeyboardExperimentScreen(
                 }
                 item {
                     TextField(
-                        modifier = Modifier.fillMaxWidth(),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp),
                         value = text,
                         onValueChange = {
                             text = it
                         },
                         maxLines = 1,
+                    )
+                }
+                item {
+                    Text(
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                        text = stringResource(R.string.supporting_text),
                     )
                 }
             }
