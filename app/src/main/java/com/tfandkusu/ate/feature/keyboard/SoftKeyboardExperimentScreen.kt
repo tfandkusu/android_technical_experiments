@@ -1,8 +1,10 @@
 package com.tfandkusu.ate.feature.keyboard
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.ime
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -15,6 +17,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.tfandkusu.ate.R
@@ -38,6 +41,8 @@ fun SoftKeyboardExperimentScreen(
                 )
             },
         ) { innerPadding ->
+            val density = LocalDensity.current
+            val isKeyboardVisible = WindowInsets.ime.getBottom(density) > 0
             var text by remember { mutableStateOf("") }
             LazyColumn(
                 modifier = Modifier
@@ -47,11 +52,22 @@ fun SoftKeyboardExperimentScreen(
                 verticalArrangement = Arrangement.Absolute.spacedBy(16.dp),
             ) {
                 item {
+                    Text(
+                        text = if (isKeyboardVisible) {
+                            stringResource(R.string.soft_keyboard_show)
+                        } else {
+                            stringResource(R.string.soft_keyboard_hide)
+                        },
+                    )
+                }
+                item {
                     TextField(
                         modifier = Modifier.fillMaxWidth(),
-                        value = text, onValueChange = {
+                        value = text,
+                        onValueChange = {
                             text = it
-                        }, maxLines = 1
+                        },
+                        maxLines = 1,
                     )
                 }
             }
