@@ -1,6 +1,5 @@
 package com.tfandkusu.ate.feature.keyboard
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -86,8 +85,9 @@ fun SoftKeyboardExperimentScreen(
                                 modifier = Modifier.fillMaxWidth(),
                                 textAlign = TextAlign.End,
                                 style = MaterialTheme.typography.bodyMedium,
-                                text = stringResource(R.string.supporting_text))
-                        }
+                                text = stringResource(R.string.supporting_text),
+                            )
+                        },
                     )
                 }
             }
