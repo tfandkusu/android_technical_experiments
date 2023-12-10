@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTheme"
+        android:name=".feature.main.MyApplication"
         tools:targetApi="31">
         <activity
             android:name=".feature.main.MainActivity"
@@ -27,6 +28,12 @@
         <activity
             android:name=".feature.jnta.JetpackNavigationTransitionAnimationActivity"
             android:label="@string/jetpack_navigation_transition_animation"
+            android:theme="@style/Theme.MyTheme" />
+
+        <activity
+            android:name=".feature.keyboard.SoftKeyboardExperimentActivity"
+            android:label="@string/jetpack_navigation_transition_animation"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.MyTheme" />
 
         <activity-alias

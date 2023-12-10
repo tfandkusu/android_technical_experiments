@@ -28,6 +28,7 @@ material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
 navigation-safe-args = { group = "androidx.navigation", name = "navigation-safe-args-gradle-plugin", version.ref = "navigation" }
+timber = { group = "com.jakewharton.timber", name = "timber", version = "5.0.1" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
